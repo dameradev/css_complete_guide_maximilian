@@ -31,10 +31,15 @@ main {
     overflow: hidden;
 }
 
+.package:hover {
+  
+}
+/* animation: wiggle 400ms 3s 8 ease-out; */
 .package:hover,
 .package:active {
     box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     border-color: #ff5454;
+    animation: push-up 200ms 0.1s 1 ease-out forwards;
     /* border-color: #ff5454 !important; */
 }
 
@@ -128,4 +133,16 @@ main {
     #free:active {
       border-right-color: #ff5454;
     }
+}
+
+@keyframes push-up {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-1.5rem)
+  }
+  100% {
+    transform: translateY(-1rem);
+  }
 }
